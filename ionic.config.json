@@ -1,0 +1,8 @@
+{
+  "name": "BMF Attorneys Contract",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
