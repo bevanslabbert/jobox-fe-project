@@ -1,0 +1,132 @@
+.page-content {
+  font-size: 0.8em;
+  @media screen and (max-width: 800px) {
+    font-size: 0.7em;
+  }
+  // padding-bottom: 4vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  height: 100%;
+  position: relative;
+}
+
+ion-input {
+  --background : var(--ion-highlight);
+  text-align: center;
+  --padding-top: 0.3em;
+  --padding-bottom: 0.3em;
+  margin: 0.6vh;
+}
+
+#open {
+  --background: transparent;
+  color: var(--ion-text-color);
+  font-size: 1em;
+}
+
+ion-modal {
+  --width: 290px;
+  --height: 382px;
+  --border-radius: 8px;
+}
+
+ion-modal ion-datetime {
+  height: 382px;
+}
+ion-datetime {
+  height: auto;
+  width: auto;
+
+  max-width: 350px;
+}
+
+.centerDiv {
+  text-align: center;
+  margin: 2vh;
+}
+
+#client-name-input {
+
+  // text-align: center;
+  width: 50%;
+  left: 25%;
+  margin: 2vh;
+  ion-label {
+    font-size: 1.5vh;
+  }
+
+  ion-input{
+    font-size: 0.7em;
+  }
+
+}
+
+.indent{
+  margin-left: 2em;
+  margin-bottom: 1vh;
+}
+
+#header {
+  padding-top: 10vh;
+}
+
+.card{
+  height: 120%;
+  color: var(--ion-text-color);
+}
+
+#text-input{
+  line-height:2vh;
+  display: flex;
+  width: 100%;
+  ion-input{
+    margin-left: 1.5vw;
+    font-size: 1em;
+  }
+}
+
+#payment-amount {
+  text-align: left;
+  margin: 0px;
+  height: 2vh;  
+}
+
+#service-description {
+  text-align: center;
+}
+
+.bullet{
+  margin-top: 2vh;
+  display: flex;
+}
+
+.indented-bullet{
+  margin-left: 3em;
+  display: inline;
+  inline-size: min-content;
+}
+
+.para {
+  display: inline;
+}
+
+.indented-indented-bullet {
+  margin: 1em;
+  margin-left: 8em;
+}
+
+.space {
+  width: 50%;
+}
+
+.sep-content {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  padding-right: 30vw;
+}
+
+.signature {
+  border-top : 0.1vh solid var(--ion-underline);
+  max-width: 70%;
+}

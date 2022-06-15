@@ -1,0 +1,161 @@
+<head>
+</head>
+<ion-content [fullscreen]="true">
+  <ion-button expand="full" (click)="download()">Download PDF</ion-button>
+  <!-- <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="arrow-down-click"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+  <ion-card class="card">
+  <div class = "page-content">
+    <app-header></app-header>
+    <h1 id="header"><strong>FIXED TERM AGREEMENT</strong></h1>
+    <br>
+    <br>
+    between
+    <br>
+    <br>
+    <div class="centerDiv">
+      <b>BMF ATTORNEYS</b>
+      <br>
+      <b>with company registration number 2022/123456/07</b>
+    </div>
+    <br>
+    <br>
+    and
+    <br>
+    <br>
+    <ion-item id = "client-name-input">
+      <!-- <ion-label position="floating">[CLIENT NAME]</ion-label> -->
+      <ion-input id="client-name" (click)="clearClientNameInput()" [(ngModel)]="name" value="Client Name"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    Collectively referred herein as the “parties”
+    <app-footer [pageNumber]=1></app-footer>
+  </div>
+</ion-card>
+<ion-card class="card">
+  <div class="page-content">
+    <app-header></app-header>
+    <strong>1. Payment Terms</strong>
+    <br>
+    <div class="para">
+    <div class="bullet">
+    &#8226;
+    <div class="indent">
+      <span id="text-input">BMF Attorney’s fee
+        <ion-input [(ngModel)]="amount" id="payment-amount" value="[Amount]" (click)="clearAmount()">
+        </ion-input>
+      </span>(excluding VAT). The retainer fee can be paid upfront, or month-to-month and the payment terms can be payable as follows:
+    </div>
+    </div>
+    <div class="indented-bullet">
+      &#9702; Upfront:
+    </div>
+    <div class="indented-indented-bullet">
+      &#8259; Three-twelfths of the fee during the probation period in 3 equal instalments by the 7th day of each month
+      <br>
+      &#8259; Nine-twelfths of the fee upon conclusion of the probation period of employment payable on the 7th day of the 4th month.
+    </div>
+    <div class="indented-bullet">
+      &#9702; Month-to-month:
+    </div>
+    <div class="indented-indented-bullet">
+      &#8259; The month-to-month fee shall be paid by the 7th day of each month
+    </div>
+    <div class="bullet">
+      &#8226;
+      <div class="indent">
+        No variation or amendment to this Agreement shall be of any effect unless such amendment is put in writing and signed by all parties
+      </div>
+    </div>
+    <div class="bullet">
+      &#8226;
+      <div class="indent">
+        Any documentation prepared by <strong>BMF Attorneys</strong> remains its property
+      </div>
+    </div>
+  </div>
+  
+  <strong>2. Appointment</strong>
+    <br>
+    <div class="indent">
+      <div class="bullet">
+        <strong>2.1. </strong> 
+        <div class="indent">
+          The Client has procured the services of <strong>BMF Attorneys</strong> and hereby accepts the appointment as an independent contractor of the Client for a fixed period of time. 
+        </div>
+      </div>
+    </div>
+    <div class="indent">
+      <div class="bullet">
+        <strong>2.2. </strong> 
+        <div class="indent">
+          The reason for this fixed-term contract is <b>for the appointment and completion of the<ion-input [(ngModel)]="service" id="service-description" (click)="clearService()" value="[Service Description]"></ion-input></b>
+        </div>
+      </div>
+    </div>
+
+    <strong>3. Duration</strong>
+    <br>
+    <div class="indent">
+      <div class="bullet">
+        <strong>3.1. </strong> 
+        <div class="indent">
+          Notwithstanding the date of signature hereof, this fixed term contract shall be deemed to have commenced on the <ion-input [(ngModel)] = "startDate" id="start" value="[Start Date]"></ion-input> and will terminate, without further notice, on the  <ion-input id="end" [(ngModel)] = "endDate" value="[End Date]"></ion-input>
+        </div>
+      </div>
+    </div>
+    <div class="indent">
+      <div class="bullet">
+        <strong>3.2. </strong> 
+        <div class="indent">
+          The automatic termination of the contract on the Termination Date shall not be construed as a dismissal but as the completion of a fixed term contract.
+        </div>
+      </div>
+    </div>
+    <ion-modal trigger="start">
+      <ng-template>
+        <ion-content>
+          <ion-datetime #startDate id="startDatePicker" (ionChange)="confirmStart()" showDefaultButtons="true" presentation="date">
+          </ion-datetime>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+    <ion-modal trigger="end">
+      <ng-template>
+        <ion-content>
+          <ion-datetime #endDate showDefaultButtons="true" (ionChange)="confirmEnd()" presentation="date">
+          </ion-datetime>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  <app-footer [pageNumber]=2></app-footer>
+  </div>
+  
+</ion-card>
+<ion-card class="card">
+  <div class="page-content">
+    <app-header></app-header>
+      <strong>4.</strong>
+      <br>
+      <br>
+      <br>
+      <div class="sep-content"><div class="block-1">Signed at</div> <div class="block-2">on</div></div>
+      <br>
+      <br>
+      <p class="signature">Who warrants authority on behalf of Jobox</p>
+      <br>
+      <br>
+      <br>
+      <div class="sep-content"><div class="block-1">Signed at</div> <div class="block-2">on</div></div>
+      <br>
+      <br>
+      <p class="signature">Who warrants authority on behalf of Jobox</p>
+    <app-footer [pageNumber]=3></app-footer>
+  </div>
+</ion-card>
+
+</ion-content>
